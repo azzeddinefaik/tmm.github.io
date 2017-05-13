@@ -1,14 +1,25 @@
-## Hello, GitHub!
+# Hello, GitHub!
 
-Thanks for checking out the innards of [my website](http://meagher.co/). Here's what's going on:
+Thanks for checking out the innards of [my website](http://meagher.co/).
 
-- [GitHub Pages](https://pages.github.com) graciously hosts my site.
-- [CloudFlare](http://www.cloudflare.com) powers my DNS.
-- [Syntatically Awesome Style Sheets (a.k.a Sass)](http://sass-lang.com) help make it pretty.
-- My blog posts are written in [Kramdown](http://kramdown.gettalong.org/documentation.html).
-- And [Jekyll](http://jekyllrb.com) does just about everything else.
+## Build Setup
 
-There's not much more to it.
+``` bash
+# install dependencies
+$ npm install # Or yarn install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
 ## Contact
 
