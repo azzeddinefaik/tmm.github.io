@@ -4,11 +4,14 @@
   </div>
 </template>
 
-<style>
-html
-{
-  font-family: sans-serif;
-  font-size: 20px;
+<style lang="scss">
+@import '~assets/scss/_variables.scss';
+
+body {
+  font: {
+  	family: $sans-serif;
+	size: 20px;
+  }
   box-sizing: border-box;
 }
 </style>

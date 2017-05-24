@@ -12,7 +12,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Building beautifully usable Internet things.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700,900|Inconsolata' }
     ]
   },
   /*
@@ -58,28 +59,16 @@ module.exports = {
   generate: {
     routes: function () {
       const fs = require('fs')
-      const POSTS_DIR = './blog/posts'
+      const POSTS_DIR = '~static/blog/posts'
       const posts = fs.readdirSync(POSTS_DIR)
-      const postRoutes = posts.map(post => `/blog/${post.split('.')[0]}`)
+      const postRoutes = posts.map(post => {
+        const tokens = post.split('-')
+        const year = tokens[0]
+        const month = tokens[1]
+        const day = tokens[2]
+        return `/blog/${year}/${month}/${day}/${post.split('.')[0]}`
+      })
       return postRoutes
     }
   }
-  // generate: {
-  //   routeParams: {
-  //     '/blog/:year/:month/:day/:slug': function (callback) {
-  //       // auto generate dynamic router according to the static/*.md when generate static pages
-  //       let fm = require('front-matter')
-  //       let fs = require('fs')
-  //       var params
-  //       fs.readdir(POSTS_DIR, function (e, f) {
-  //         params = f.map((v) => {
-  //           if (/.+\.md/.test(v)) { return { p: v.substr(0, v.length - 3) } }
-  //         }).filter((v) => {
-  //           return v !== undefined
-  //         })
-  //         callback(null, params)
-  //       })
-  //     }
-  //   }
-  // }
 }
