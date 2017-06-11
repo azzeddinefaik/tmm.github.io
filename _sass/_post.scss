@@ -1,0 +1,11 @@
+@supports (initial-letter: 4) or (-webkit-initial-letter: 4) {
+  p::first-letter{
+    margin-right: 0.5em;
+
+    color: red;
+    font-size: 20px;
+
+    -webkit-initial-letter: 4; 
+    initial-letter: 4;
+  }
+}

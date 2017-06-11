@@ -1,0 +1,148 @@
+.intro {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  max-width: 32rem;
+  padding: {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  &__headline {
+    color: palette(black);
+    font: {
+      size: 1.5rem;
+      weight: 900;
+    }
+    margin-bottom: .25rem;  
+
+    i {
+      white-space: nowrap;
+    }
+
+    @media screen and (max-width: screen(small)) {
+      font-size: 1.35rem;
+    }
+  }
+
+  &__subline {
+    color: palette(gray);
+    display: block;
+    font: {
+      size: 1.25rem;
+      weight: 500;
+    }
+    margin-top: .25rem;
+
+    @media screen and (max-width: screen(small)) {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+.posts {
+  display: flex;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  max-width: 32rem;
+  padding: {
+    left: 1rem;
+    right: 1rem;
+  }
+  position: relative;
+
+  @media screen and (max-width: screen(medium)) {
+    flex-direction: column;
+  }
+
+  &:hover {
+    .posts__title {
+      color: palette(blue); 
+    }
+  }
+
+  &__title {
+    color: palette(gray);
+    font: {
+      size: .95rem;
+      weight: 700;
+    }
+    margin: 0;
+    padding-top: 0.85rem;
+    position: absolute;
+    left: -5rem;
+    transition: color .25s;
+
+    @media screen and (max-width: screen(medium)) {
+      padding: {
+        bottom: .75rem;
+        top: .75rem;
+      }
+      position: initial;
+    }
+
+    @media screen and (max-width: screen(small)) {
+      font-size: .85rem;
+    }
+  }
+
+  &__group {
+    width: 100%;
+  }
+}
+
+.post {
+  align-items: center;
+  border-bottom: {
+    color: palette(gray, light);
+    style: solid;
+    width: 1px;
+  }
+  color: palette(black);
+  display: flex;
+  font-size: .95rem;
+  justify-content: space-between;
+  padding: {
+    bottom: .75rem;
+    top: .75rem;
+  }
+  text-decoration: none;
+  transition: color .25s;
+  width: 100%;
+
+  @media screen and (max-width: screen(small)) {
+    font-size: .85rem;
+  }
+  
+  &:hover {
+    color: palette(orange);
+  }
+
+  &:first-child {
+    border-top: {
+      color: palette(gray, light);
+      style: solid;
+      width: 1px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__date {
+    color: palette(gray);
+    font: {
+      size: .8rem;
+      weight: 500;
+    }
+    white-space: nowrap;
+
+    @media screen and (max-width: screen(small)) {
+      font-size: .75rem;
+    }
+  }
+}

@@ -27,7 +27,14 @@
 }
 
 @each $name, $color in ('angel-list', #000), ('github', #333), ('medium', #00AB72), ('twitter', #00A3EC), ('email', #FF554A), ('keybase', #FF6F29), ('hacker-news', #FF6327) {
-  .link-#{$name} {    
+  .link-border-#{$name} {
+    &:hover {
+      color: $color !important;
+      border-color: $color !important;
+    }
+  }
+
+  .link-#{$name} {
     &:hover {
       color: $color !important;
     }

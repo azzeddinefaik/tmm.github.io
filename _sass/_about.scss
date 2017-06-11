@@ -1,0 +1,44 @@
+.about {
+  display: flex;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  max-width: 32rem;
+  padding: {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  &__image {
+    margin: 0;
+    display: block;
+    width: 35%;
+    height: 100%;
+
+    @media screen and (max-width: screen(small)) {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding: 0 0 0 1rem;
+    
+    @media screen and (max-width: screen(small)) {
+      padding: 0;
+    }
+  }
+
+  &__head {
+    margin: 0;
+    font-size: 1.35rem;
+    font-family: sans-serif;
+    font-weight: 500;
+  }
+
+  &__description {
+    color: palette(gray);
+    margin: .5rem 0;
+    font-size: 1.25rem;
+  }
+}

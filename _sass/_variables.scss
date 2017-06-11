@@ -1,25 +1,54 @@
-// fonts
-$sans: 'Lato', -apple-system, Helvetica, Arial, sans-serif;
+// FONTS
+$sans: 'Avenir', 'Lato', -apple-system, Helvetica, Arial, sans-serif;
 $serif: 'Alegreya', 'Times New Roman', Georgia, serif;
 $mono: 'Roboto Mono', monospace;
 
-// colors
-$white: #fff;
-$black: #333;
-$gray: #888;
-$gray-light: #E8E8E8;
-$gray-lightest: #FAFAFA;
-$green: #00AB72;
+// COLORS
+$orange: #FF5722;
 $blue: #0087F8;
-$red: #FF554A;
+$dark: #222222;
+$palettes: (
+  white: (
+  	base: #ffffff
+  ),
 
-// widths
-$sm: 544px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
+  black: (
+  	base: #000000
+  ),
 
-// levels
+  orange: (
+      base: $orange,
+      dark: darken($orange, 10),
+      light: lighten($orange, 35),
+      a-light: rgba(255, 87, 34, .25),
+      x-dark: darken($orange, 20)
+  ),
+
+  blue: (
+      base: $blue,
+      dark: darken($blue, 10),
+      light: lighten($blue, 35),
+      a-light: rgba(22, 121, 255, .5),
+      x-dark: darken($blue, 20)
+  ),
+
+	gray: (
+		base: #888888,
+		dark: #555555,
+		light: #DDDDDD,
+		x-light: #EFEFEF
+	)
+);
+
+// SCREEN WIDTHS
+$screen: (
+  small: 544px,
+  medium: 768px,
+  large: 992px,
+  x-large: 1200px
+);
+
+// LEVELS
 $l1: 0.33rem;
 $l2: 0.67rem;
 $l3: 1rem;

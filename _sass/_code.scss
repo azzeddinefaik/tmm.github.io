@@ -1,4 +1,4 @@
-$background: $gray-lightest;
+$background: palette(gray);
 $comment: #888;
 $name: #1b9af7;
 $keyword: #37C47B;
@@ -10,7 +10,7 @@ $class: #7b72e9;
 
 code {
   background-color: $background;
-  color: $black;
+  color: palette(black);
   font-family: $mono;
   font-size: .95rem;
   font-style: normal;

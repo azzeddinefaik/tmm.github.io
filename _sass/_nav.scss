@@ -1,0 +1,57 @@
+.nav {
+  border-bottom: {
+    color: palette(gray, light);
+    style: solid;
+    width: 1px;
+  }
+  font: {
+    size: .8rem;
+    weight: 500;
+  }
+  margin: {
+    bottom: 3rem;
+    top: 1rem;
+  }
+  padding-bottom: .25rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+    max-width: 32rem;
+    padding: {
+      left: 1rem;
+      right: 1rem;
+    }
+  }
+
+  a {
+    border-bottom: {
+      color: transparent;
+      style: solid;
+      width: 1px;
+    }
+    color: palette(gray);
+    padding-bottom: .33rem;
+    text-decoration: none;
+    transition: color .25s, border-color .5s;
+
+    &:hover {
+      color: palette(orange);
+      border-color: palette(orange);
+    }
+  }
+
+  &__right, &__left {
+    a {
+      margin-right: .5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
